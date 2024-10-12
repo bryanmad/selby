@@ -20,7 +20,7 @@ body {
     background-color: white;
 }
 
-pl {
+.pl {
   --hue: 223;
   --bg: hsl(var(--hue),10%,5%);
   --fg: hsl(var(--hue),10%,95%);
@@ -136,19 +136,21 @@ pl {
 
 document.onreadystatechange = function () {
    if (document.readyState !== "complete") {
-       document.querySelector("body").style.visibility = "hidden";
+       //document.querySelector("body").style.visibility = "hidden";
        document.getElementById("loading").style.visibility = "visible";
    } else {
        // show loader for a second more
-     //  setTimeout(() => {
-       start();
+       console.log("start before")
+       setTimeout(() => {  
        document.getElementById("loading").style.visibility ="none";
-       document.querySelector("body").style.visibility = "visible";
-    //   }, 1000)
+       //document.querySelector("body").style.visibility = "visible";
+       start();
+       }, 1000)
    }
 };
-
+    
 function start() {
+    console.log("start")
     window.location.assign("https://docs.google.com/spreadsheets/d/e/2PACX-1vRV4u_1Z4aqpCT4VtZxB2dLe04c0q5_gr_13dljt6dc5o30k5xbi1P9v236o_UODCcW-nohiBOP1Nyc/pubhtml?gid=1753542789&single=true&chrome=false")
 }
 
