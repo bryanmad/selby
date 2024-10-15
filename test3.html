@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>show Hide Div on Scroll</title>
+<style type="text/css">
+body {
+    height: 300vh;
+    background: lightGray;
+}
+
+.hide {
+    opacity:0;
+//    scale: 0.9;
+    height:0;
+   
+}
+.show {
+    opacity:1;
+//    scale: 1;
+    height: 60vh;
+  
+}
+    .divclass1 {
+        background: green;
+        box-shadow: 10px 10px 25px black;
+      margin: 2vh;    
+    color: white;
+    width: 92%;
+//    height: 60vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+    }
+    
+    .divclass2 {
+        background: blue;
+        box-shadow: 10px 10px 25px black;
+      margin: 2vh;
+    color: white;
+    width: 92%;
+//    height: 40vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+    }
+    
+       .divclass3 {
+        background: red;
+           box-shadow: 10px 10px 25px black;
+        margin: 2vh;
+    color: white;
+    width: 92%;
+//    height: 60vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+    }
+    
+    #top1 {
+             background: cyan;
+         box-shadow: 10px 10px 25px black;
+    color: white;
+    width: 92%;
+    height: 33vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+         margin: 2vh;
+    }
+    
+    #top2 {
+             background: gray;
+       box-shadow: 10px 10px 25px black;
+    color: white;
+    width: 92%;
+    height: 48vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+        margin: 2vh;
+    }
+    
+    
+    
+    
+    
+</style>
+</head>
+<body>
+    <div id="top1"></div>
+    <div id="top2"></div>
+    <div class="divclass1 hide" id="myID1"></div>
+     <div class="divclass2 hide" id="myID2"></div>
+    <div class="divclass3 hide" id="myID3"></div>
+
+    
+
+
+<script>
+myID1 = document.getElementById("myID1");
+myID2 = document.getElementById("myID2");
+myID3 = document.getElementById("myID3");
+let h = window.innerHeight;    
+var myScrollFunc = function () {
+    //var sticky1 = myID1.offsetHeight - (h/5);
+    //var sticky2 = myID2.offsetHeight + sticky1;
+    //var sticky3 = myID3.offsetHeight + sticky2;
+    
+    
+    var sticky1 = (h * .6) - (h/5);
+    var sticky2 = (h * .6) + sticky1;
+    var sticky3 = (h * .6) + sticky2;
+    
+    
+    
+   // console.log("sticky = "+sticky)
+   // console.log("sticky1 = "+sticky1)
+   // console.log("sticky2 = "+sticky2)
+    
+  var y = window.scrollY;
+    
+  if (y >= sticky1) {
+    myID1.className = "divclass1 show";
+  } else {
+    myID1.className = "divclass1 hide";
+  }
+    
+    
+    
+    if (y >= sticky2) {
+    myID2.className = "divclass2 show";
+  } else {
+    myID2.className = "divclass2 hide";
+  }
+    
+    
+     if (y >= sticky3) {
+    myID3.className = "divclass3 show";
+  } else {
+    myID3.className = "divclass3 hide";
+  }  
+    
+    
+};
+
+window.addEventListener("scroll", myScrollFunc);
+
+    </script>
+</body>
+</html>
