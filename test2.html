@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>show Hide Div on Scroll</title>
+<title>liv</title>
 <style type="text/css">
 body {
     height: 300vh;
@@ -205,7 +205,7 @@ body {
     <div class="page">
         
     <div class="left">
-    <div id="top1left">Create a competition. Select competition type.</div>
+    <div id="top1left" onclick="top1leftClick()">Create a competition. Select competition type.</div>
     <div id="top2left"></div>
     <div class="divclass1left hide" id="myID1left"></div>
      <div class="divclass2left hide" id="myID2left"></div>
@@ -331,6 +331,52 @@ var myScrollFunc = function () {
 };
 
 window.addEventListener("scroll", myScrollFunc);
+    
+    
+    
+    
+    
+    
+    function top1leftClick() {
+     var startColor =  document.getElementById("top1left").style.background  
+     document.getElementById("top1left").style.background = "blue"   
+        
+        
+         // give some feedback
+      // vibrate if android phone or "pop" for anything else 
+   const canVibrate = window.navigator.vibrate
+   if (canVibrate) {
+      window.navigator.vibrate(50)
+   } else {
+      var audio = new Audio('pop.wav');
+      audio.play();   
+   }     
+        
+        
+        
+        
+        
+     setTimeout(() => {document.getElementById("top1left").style.background = startColor}, 1000);  
+        
+        
+  //   alert("top1leftClick")   
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     </script>
 </body>
