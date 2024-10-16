@@ -19,7 +19,7 @@ body {
     
   
 }
-    .divclass1 {
+    .divclass1left {
         background: green;
         box-shadow: 10px 10px 25px black;
       margin: 2vh;    
@@ -32,7 +32,7 @@ body {
     transition: all 1.5s;
     }
     
-    .divclass2 {
+    .divclass2left {
         background: blue;
         box-shadow: 10px 10px 25px black;
       margin: 2vh;
@@ -45,7 +45,7 @@ body {
     transition: all 1.5s;
     }
     
-       .divclass3 {
+       .divclass3left {
         background: red;
            box-shadow: 10px 10px 25px black;
         margin: 2vh;
@@ -58,7 +58,99 @@ body {
     transition: all 1.5s;
     }
     
-    #top1 {
+      .divclass1right {
+        background: green;
+        box-shadow: 10px 10px 25px black;
+      margin: 2vh;    
+    color: white;
+    width: 92%;
+    height: 30vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+    }
+    
+    .divclass2right {
+        background: blue;
+        box-shadow: 10px 10px 25px black;
+      margin: 2vh;
+    color: white;
+    width: 92%;
+    height: 30vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+    }
+    
+       .divclass3right {
+        background: red;
+           box-shadow: 10px 10px 25px black;
+        margin: 2vh;
+    color: white;
+    width: 92%;
+    height: 30vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+    }
+    
+    
+        .divclass4right {
+        background: black;
+           box-shadow: 10px 10px 25px black;
+        margin: 2vh;
+    color: white;
+    width: 92%;
+    height: 30vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+    }
+    
+        .divclass5right {
+        background: orange;
+           box-shadow: 10px 10px 25px black;
+        margin: 2vh;
+    color: white;
+    width: 92%;
+    height: 30vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+    }
+    
+         .divclass6right {
+        background: dodgerBlue;
+           box-shadow: 10px 10px 25px black;
+        margin: 2vh;
+    color: white;
+    width: 92%;
+    height: 30vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+    }
+    
+         .divclass7right {
+        background: indigo;
+            box-shadow: 10px 10px 25px black;
+        margin: 2vh;
+    color: white;
+    width: 92%;
+    height: 30vh;
+    //border: 5px solid blue;
+ border-radius: 10px;
+    z-index: 1;
+    transition: all 1.5s;
+    }
+    
+    #top1left, #top1right {
              background: cyan;
          box-shadow: 10px 10px 25px black;
     color: white;
@@ -71,7 +163,7 @@ body {
          margin: 2vh;
     }
     
-    #top2 {
+    #top2left, #top2right {
              background: gray;
        box-shadow: 10px 10px 25px black;
     color: white;
@@ -85,56 +177,144 @@ body {
     }
     
     
+    .page {
+     display: flex;   
+    }
+    .left {
+       flex: 50%; 
+    }
     
-    
+    .right {
+       flex: 50%; 
+    }
     
 </style>
 </head>
 <body>
-    <div id="top1"></div>
-    <div id="top2"></div>
-    <div class="divclass1 hide" id="myID1"></div>
-     <div class="divclass2 hide" id="myID2"></div>
-    <div class="divclass3 hide" id="myID3"></div>
-
+    <div class="page">
+        
+    <div class="left">
+    <div id="top1left"></div>
+    <div id="top2left"></div>
+    <div class="divclass1left hide" id="myID1left"></div>
+     <div class="divclass2left hide" id="myID2left"></div>
+    <div class="divclass3left hide" id="myID3left"></div>
+    </div>
     
+    <div class="right">
+    <div id="top1right"></div>
+    <div id="top2right"></div>
+    <div class="divclass1right hide" id="myID1right"></div>
+    <div class="divclass2right hide" id="myID2right"></div>
+    <div class="divclass3right hide" id="myID3right"></div>
+    <div class="divclass4right hide" id="myID4right"></div>
+    <div class="divclass5right hide" id="myID5right"></div>
+    <div class="divclass6right hide" id="myID6right"></div>
+    <div class="divclass7right hide" id="myID7right"></div>
+    </div>
 
-
+    </div>    
 <script>
-myID1 = document.getElementById("myID1");
-myID2 = document.getElementById("myID2");
-myID3 = document.getElementById("myID3");
+myID1left = document.getElementById("myID1left");
+myID2left = document.getElementById("myID2left");
+myID3left = document.getElementById("myID3left");
+    
+myID1right = document.getElementById("myID1right");
+myID2right = document.getElementById("myID2right");
+myID3right = document.getElementById("myID3right");  
+myID4right = document.getElementById("myID4right");
+myID5right = document.getElementById("myID5right");  
+myID6right = document.getElementById("myID6right");
+myID7right = document.getElementById("myID7right");
+    
 let h = window.innerHeight;    
 var myScrollFunc = function () {
-    var sticky1 = myID1.offsetHeight - (h/5);
-    var sticky2 = myID2.offsetHeight + sticky1;
-    var sticky3 = myID3.offsetHeight + sticky2;
+    var left1 = myID1left.offsetHeight - (h/5);
+    var left2 = myID2left.offsetHeight + left1;
+    var left3 = myID3left.offsetHeight + left2;
+    
+    var right1 = myID1right.offsetHeight - (h/5);
+    var right2 = myID2right.offsetHeight + right1;
+    var right3 = myID3right.offsetHeight + right2;
+    var right4 = myID4right.offsetHeight + right3;
+    var right5 = myID5right.offsetHeight + right4;
+    var right6 = myID6right.offsetHeight + right5;
+    var right7 = myID7right.offsetHeight + right6;
+    
    // console.log("sticky = "+sticky)
    // console.log("sticky1 = "+sticky1)
    // console.log("sticky2 = "+sticky2)
     
   var y = window.scrollY;
     
-  if (y >= sticky1) {
-    myID1.className = "divclass1 show";
+  if (y >= left1) {
+    myID1left.className = "divclass1left show";
   } else {
-    myID1.className = "divclass1 hide";
+    myID1left.className = "divclass1left hide";
+  }
+    
+  if (y >= right1) {
+    myID1right.className = "divclass1right show";
+  } else {
+    myID1right.className = "divclass1right hide";
+  } 
+    
+    
+    
+  if (y >= left2) {
+    myID2left.className = "divclass2left show";
+  } else {
+    myID2left.className = "divclass2left hide";
+  }
+    
+  if (y >= right2) {
+    myID2right.className = "divclass2right show";
+  } else {
+    myID2right.className = "divclass2right hide";
   }
     
     
-    
-    if (y >= sticky2) {
-    myID2.className = "divclass2 show";
+      
+  if (y >= left3) {
+    myID3left.className = "divclass3left show";
   } else {
-    myID2.className = "divclass2 hide";
-  }
-    
-    
-     if (y >= sticky3) {
-    myID3.className = "divclass3 show";
-  } else {
-    myID3.className = "divclass3 hide";
+    myID3left.className = "divclass3left hide";
   }  
+    
+  if (y >= right3) {
+    myID3right.className = "divclass3right show";
+  } else {
+    myID3right.className = "divclass3right hide";
+  }  
+    
+    
+    
+    
+    
+  if (y >= right4) {
+    myID4right.className = "divclass4right show";
+  } else {
+    myID4right.className = "divclass4right hide";
+  } 
+    
+    
+  if (y >= right5) {
+    myID5right.className = "divclass5right show";
+  } else {
+    myID5right.className = "divclass5right hide";
+  } 
+    
+    if (y >= right6) {
+    myID6right.className = "divclass6right show";
+  } else {
+    myID6right.className = "divclass6right hide";
+  } 
+    
+   if (y >= right7) {
+    myID7right.className = "divclass7right show";
+  } else {
+    myID7right.className = "divclass7right hide";
+  }   
     
     
 };
