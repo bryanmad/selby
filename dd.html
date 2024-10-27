@@ -55,9 +55,7 @@ html, body {margin: 0; height: 100%; overflow: auto}
     <h2 id="app_status">Drag status: </h2>
     <h1>Drop Zone</h1>
     <div id="drop_zone1" ondragover="return false"></div>
-    <div id="drop_zone2" ondragover="return false"></div>
-    <div id="drop_zone3" ondragover="return false"></div>
-    
+  
     
     <div id="object1" class="objects" draggable="true">Object 1</div>
     <div id="object2" class="objects" draggable="true">Object 2</div>
@@ -97,17 +95,7 @@ window.onload = function () {
     dropZone1.addEventListener('dragleave', handleDragLeave, false);
     dropZone1.addEventListener('drop', handleDragDrop, false);
 
-    var dropZone2 = document.getElementById('drop_zone2');
-
-    dropZone2.addEventListener('dragenter', handleDragEnter, false);
-    dropZone2.addEventListener('dragleave', handleDragLeave, false);
-    dropZone2.addEventListener('drop', handleDragDrop, false);
-    
-    var dropZone3 = document.getElementById('drop_zone3');
-
-    dropZone3.addEventListener('dragenter', handleDragEnter, false);
-    dropZone3.addEventListener('dragleave', handleDragLeave, false);
-    dropZone3.addEventListener('drop', handleDragDrop, false);
+   
     
     
     
@@ -142,8 +130,7 @@ window.onload = function () {
 
     // Draggable element functionality
     var object1 = document.getElementById('object1');
-    var object2 = document.getElementById('object2');
-    var object3 = document.getElementById('object3');
+ 
 
     var activeEvent = '';
     var originalX = '';
@@ -155,17 +142,7 @@ window.onload = function () {
     object1.addEventListener('touchmove', handleTouchMove, false);
     object1.addEventListener('touchend', handleTouchEnd, false);
 
-    object2.addEventListener('dragstart', handleDragStart, false);
-    object2.addEventListener('dragend', handleDragEnd, false);
-    object2.addEventListener('touchstart', handleTouchStart, false);
-    object2.addEventListener('touchmove', handleTouchMove, false);
-    object2.addEventListener('touchend', handleTouchEnd, false);
-
-    object3.addEventListener('dragstart', handleDragStart, false);
-    object3.addEventListener('dragend', handleDragEnd, false);
-    object3.addEventListener('touchstart', handleTouchStart, false);
-    object3.addEventListener('touchmove', handleTouchMove, false);
-    object3.addEventListener('touchend', handleTouchEnd, false);
+  
 
     function handleDragStart(e) {
         document.getElementById('app_status').innerHTML = "Dragging the element " + e
