@@ -285,6 +285,15 @@ window.onload = function () {
                 droppedIn = true;
                 document.getElementById('app_status').innerHTML = "You dropped " +
                        e.target.getAttribute('id') + " into drop zone";
+                
+                
+                
+                
+                document.getElementById(e.target.getAttribute('id')).style.backgroundColor = "lightCyan";
+                document.getElementById(e.target.getAttribute('id')).style.color = "teal";
+                
+                
+                
             } else {
                 e.target.style.left = originalX;
                 e.target.style.top = originalY;
