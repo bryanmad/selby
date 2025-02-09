@@ -242,14 +242,27 @@ font-weight: bold;
 function clicked(id) {
 
    // vibrate if android phone or "pop" for anything else 
-   const canVibrate = window.navigator.vibrate
+ /*  
+   var canVibrate = "false";
+   canVibrate = window.navigator.vibrate
    if (canVibrate) {
-      window.navigator.vibrate(50)
+      window.navigator.vibrate(150)
    } else {
       var audio = new Audio('pop.wav');
       audio.play();   
    }   
-   
+ */
+
+let canVibrate = false;
+document.addEventListener("touchstart", (event) => {
+    if (!canVibrate) {
+        canVibrate = true
+    }
+    navigator.vibrate(200);
+});
+
+
+  
    //document.getElementById(id).classList.toggle("half")
 
    if (id == "oneone") {
