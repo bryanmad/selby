@@ -180,14 +180,14 @@ font-weight: bold;
 
 <div class="container" id="container">
   <!-- row 1, col 1 -->
-  <div class="item" id="oneone" onmousedown="clicked(this.id)">
+  <div class="item" id="oneone" onclick="clicked(this.id)">
   <a>
   <span class="white">Monday</span>
   <br>Romanby<br>results, handicaps, par 3 results, prizes.
   </a>  
   </div>
   <!-- row 1, col 2 -->
-  <div class="item" id="onetwo" onhover="clicked(this.id)">
+  <div class="item" id="onetwo" onclick="clicked(this.id)">
   <a>
   <span class="white">Tuesday</span>
   <br>Selby<br>results, handicaps, par 3 results, prizes.
@@ -250,7 +250,7 @@ function clicked(id) {
       audio.play();   
    }   
    
-   document.getElementById(id).classList.toggle("half")
+   //document.getElementById(id).classList.toggle("half")
 
    if (id == "oneone") {
        window.location.assign("monday.html");   
