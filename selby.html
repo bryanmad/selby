@@ -237,9 +237,7 @@ font-weight: bold;
 // },2500 )
 
 // prevent default img menu of options
-document.addEventListener('contextmenu', event => {
-   event.preventDefault()
-})
+window.addEventListener("contextmenu", e => e.preventDefault());
 
 
 function clicked(id) {
