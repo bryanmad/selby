@@ -152,11 +152,14 @@ font-weight: bold;
 #twotwo.half,
 #threeone.half,
 #threetwo.half {
-   transform: scale(0.8);
+   animation: scaleswitch 0.5s;
    //background: blue;
 }
 
-
+@keyframes scaleswitch {
+  from {scale: 0.8;}
+  to {scale: 1.0;}
+}
 
 /*
 #12E193 aqua green
