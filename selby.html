@@ -70,22 +70,24 @@ font-family: Kalam;
 #oneone {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  //height: 33vh;
+
   justify-content: center;
   align-items: center;
   background: #12E193;  
+  
+  transition-duration: 0.3s;  
 }
-/* tuesday */
+
 #twoone {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  //height: 33vh;
+
   justify-content: left;
   align-items: center;
-  background: #2B547E; /* blue jay */
+  background: #2B547E;
   
   
- //transition-duration: 0.3s;  
+
   
   
 }
@@ -93,37 +95,41 @@ font-family: Kalam;
 #onetwo {
    font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  //height: 33vh;
+
   justify-content: left;
   align-items: center;
-  background: #4863A0; /* slate blue gray */
+  background: #4863A0;
+  
+    transition-duration: 0.3s;  
+  
+  
 }
 
 #twotwo {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  //height: 33vh;
+
   justify-content: left;
   align-items: left;
-  background: #007C80; /* azure blue */
+  background: #007C80;
 }
-/* wednesday */
+
 #threeone {
    font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  //height: 33vh;
+
   justify-content: left;
   align-items: left;
-  background: #1B8A6B; /* azure blue */
+  background: #1B8A6B;
 }
 
 #threetwo {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  //height: 33vh;
+
   justify-content: left;
   align-items: left;
-  background: #C36241; /* azure blue */
+  background: #C36241;
 }
 
 
@@ -146,34 +152,8 @@ font-weight: bold;
 #twotwo.half,
 #threeone.half,
 #threetwo.half {
-   transform: scale(0.95);
-   background: blue;
-}
-
-.txttop {
-     font-family: 'Kalam';
-      transform: rotate(-5deg);
-width: 100vw;
-font-size: 10vw;
-padding-bottom: 5vh;
-padding-top:10vh;
-padding-left: 10vw;
-text-align: left;
-}
-
-.txttop.img {
-display: block;
-margin: 0 auto;
-}
-
-.txtbottom {
-     font-family: 'Kalam';
-      transform: rotate(-5deg);
-width: 100vw;
-font-size: 10vw;
-padding-top: 5vh;
-padding-left: 5vh;
-text-align: center;
+   transform: scale(0.8);
+   //background: blue;
 }
 
 
@@ -260,8 +240,8 @@ text-align: center;
 
 
 function clicked(id) {
-   // resize
-   //document.getElementById(id).classList.toggle("half");
+console.log("clicked")
+  
    // vibrate if android phone or "pop" for anything else 
    const canVibrate = window.navigator.vibrate
    if (canVibrate) {
@@ -270,14 +250,18 @@ function clicked(id) {
       var audio = new Audio('pop.wav');
       audio.play();   
    }   
-   
+   console.log("clicked")
+   // resize
    document.getElementById(id).classList.toggle("half")
    
+  console.log("clicked")
   
-  
-     // setTimeout(function() {
-      document.getElementById(id).classList.toggle("half")
+      setTimeout(function() {
+      //document.getElementById(id).classList.toggle("half")
       if (id == "oneone") {
+         window.location.assign("monday.html");   
+      }
+      if (id == "onetwo") {
          window.location.assign("monday.html");   
       }
       if (id == "twoone") {
@@ -286,7 +270,7 @@ function clicked(id) {
       if (id == "threeone") {   
          window.location.assign("wednesday.html"); 
       }  
-     // },500 )
+      },500 )
   
    
    
