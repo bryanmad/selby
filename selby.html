@@ -6,7 +6,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
       <title>selby</title>
       <meta content="Bryan M" name="author" />
-      <link rel="manifest" href="bricks.webmanifest">
       <link href="bricksicon.png" rel="icon" type="image/x-icon" />
       <link rel="apple-touch-icon" sizes="180x180" href="bricksicon.png" />
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -18,7 +17,7 @@
   align-content: space-between;
   /* The container needs a fixed height, and it 
    * needs to be taller than your tallest column. */
-  height: 1000px;
+  height: 95vh;
   
   /* Optional */
   //background: gray;
@@ -28,32 +27,13 @@
   margin: 1vw auto; //40px auto;
   counter-reset: items;
   
-  
-
-  
-  
 }
 
-.firstscreen {
-//height: 100vh;
-//width: 100vw;
-//background: white; 
-//display: flex;
-//  justify-content: center;
-//  align-items: center;
-margin: 2px;
-float: left;
-width: 60px;
 
-}
-
-.firstscreen.splash {
-background: white;
-}
 .item {
 //font-family: sans-serif;
 font-family: Kalam;
-  width: 49%;
+  width: 47%;
   /* Optional */
   position: relative;
   margin-bottom: 2%;
@@ -67,6 +47,7 @@ font-family: Kalam;
   color: #fff;
   padding: 15px;
   box-sizing: border-box;
+  height: 30vh;
 }
 
 //.item::before {
@@ -83,16 +64,16 @@ font-family: Kalam;
 #oneone {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  height: 25vh;
+  //height: 33vh;
   justify-content: center;
   align-items: center;
-  background: dodgerBlue;  
+  background: #12E193;  
 }
 /* tuesday */
 #twoone {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  height: 25vh;
+  //height: 33vh;
   justify-content: left;
   align-items: center;
   background: #2B547E; /* blue jay */
@@ -104,76 +85,41 @@ font-family: Kalam;
 }
 
 #onetwo {
-  font-size: calc(1vw + 1vh + 2vmin);
+   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  height: 25vh;
+  //height: 33vh;
   justify-content: left;
   align-items: center;
-  background: #737CA1; /* slate blue gray */
+  background: #4863A0; /* slate blue gray */
 }
 
 #twotwo {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  height: 30vh;
+  //height: 33vh;
   justify-content: left;
   align-items: left;
-  background: #4863A0; /* azure blue */
+  background: #007C80; /* azure blue */
 }
 /* wednesday */
 #threeone {
-  font-size: calc(1vw + 1vh + 2vmin);
+   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  height: 25vh;
+  //height: 33vh;
   justify-content: left;
   align-items: left;
-  background: #4863A0; /* azure blue */
+  background: #1B8A6B; /* azure blue */
 }
 
 #threetwo {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-  height: 30vh;
+  //height: 33vh;
   justify-content: left;
   align-items: left;
-  background: #4863A0; /* azure blue */
-}
-/* thursday */
-#fourone {
-  font-size: calc(1vw + 1vh + 2vmin);
-  display: flex;
-  height: 25vh;
-  justify-content: left;
-  align-items: left;
-  background: #4863A0; /* azure blue */
+  background: #C36241; /* azure blue */
 }
 
-#fourtwo {
-  font-size: calc(1vw + 1vh + 2vmin);
-  display: flex;
-  height: 20vh;
-  justify-content: left;
-  align-items: left;
-  background: #4863A0; /* azure blue */
-}
-
-#fiveone {
-  font-size: calc(1vw + 1vh + 2vmin);
-  display: flex;
-  height: 20vh;
-  justify-content: left;
-  align-items: left;
-  background: #4863A0; /* azure blue */
-}
-
-#fivetwo {
-  font-size: calc(1vw + 1vh + 2vmin);
-  display: flex;
-  height: 20vh;
-  justify-content: left;
-  align-items: left;
-  background: #4863A0; /* azure blue */
-}
 
 
 
@@ -183,21 +129,17 @@ font-weight: bold;
 //font-size: calc(1vw + 1vh + 2vmin);
  // display: inline;
  // height: 37vh;
- // justify-content: center;
- // align-items: center;
+  justify-content: center;
+  align-items: center;
  // background: dodgerBlue;  
 }
 
 #oneone.half,
-#twoone.half,
-#threeone.half,
-#fourone.half,
-#fiveone.half,
 #onetwo.half,
+#twoone.half,
 #twotwo.half,
-#threetwo.half,
-#fourtwo.half,
-#fivetwo.half {
+#threeone.half,
+#threetwo.half {
    transform: scale(0.95);
    background: blue;
 }
@@ -255,75 +197,47 @@ text-align: center;
   <div class="item" id="oneone" onclick="clicked(this.id)">
   <a>
   <span class="white">Monday</span>
-  <br>Catterick results, handicaps, par 3 results, prizes.
+  <br>Romanby<br>results, handicaps, par 3 results, prizes.
   </a>  
   </div>
   <!-- row 1, col 2 -->
   <div class="item" id="onetwo" onclick="clicked(this.id)">
   <a>
   <span class="white">Tuesday</span>
-  <br>
+  <br>Selby<br>results, handicaps, par 3 results, prizes.
   </a>  
   </div>
   <!-- row 2, col 1 -->
   <div class="item" id="twoone" onclick="clicked(this.id)">
   <a>
-  <span class="white">Tuesday</span>
-  <br>Selby results, handicaps, par 3 results, prizes.
+  <span class="white">Wednesday</span>
+  <br>Oaks<br>results, handicaps, par 3 results, prizes.
   </a>
   </div>
   
   <!-- row 2, col 2 -->
   <div class="item" id="twotwo" onclick="clicked(this.id)">
   <a>
-  <span class="white">not Thursday</span>
-  <br>not Richmond results, handicaps, par 3 results, prizes.
+  <span class="white">Thursday</span>
+  <br>Tadcaster<br>results, handicaps, par 3 results, prizes.
   </a>  
   </div>
   <!-- row 3, col 1 -->
   <div class="item" id="threeone" onclick="clicked(this.id)">
   <a>
-  <span class="white">Wednesday</span>
-  <br>Oaks results, handicaps, par 3 results, prizes.
+  <span class="white">Overall</span>
+  <br>Final results<br>points and prizes.
   </a>
   </div>
   <!-- row 3, col 2 -->
   <div class="item" id="threetwo" onclick="clicked(this.id)">
   <a>
-  <span class="white">another</span>
-  <br>this is another one
+  <span class="white">Threes</span>
+  <br>Par 3's<br>results, prizes.
   </a>
   </div>
-  <!-- row 4, col 1 -->
-  <div class="item" id="fourone" onclick="clicked(this.id)">
-  <a>
-  <span class="white">Thursday</span>
-  <br>Richmond results, handicaps, par 3 results, prizes.
-  </a>
-  </div>
-  <!-- row 4, col 2 -->
-  <div class="item" id="fourtwo" onclick="clicked(this.id)">
-  <a>
-  <span class="white">another</span>
-  <br>this is another one
-  </a>
-  </div>
-  <!-- row 5, col 1 
-  <div class="item" id="fiveone" onclick="clicked(this.id)">
-  <a>
-  <span class="white">another</span>
-  <br>this is another one
-  </a>
-  </div>
-  -->
-  <!-- row 5, col 2 
-  <div class="item" id="fivetwo" onclick="clicked(this.id)">
-  <a>
-  <span class="white">another</span>
-  <br>this is another one
-  </a>
-  </div>
-  -->
+  
+  
 </div>
 
 <script>
