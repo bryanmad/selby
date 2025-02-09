@@ -236,7 +236,10 @@ font-weight: bold;
 // document.getElementById("firstscreen").style.display = "none"
 // },2500 )
 
-
+// prevent default img menu of options
+document.addEventListener('contextmenu', event => {
+   event.preventDefault()
+})
 
 
 function clicked(id) {
@@ -286,10 +289,7 @@ document.addEventListener("touchstart", (event) => {
 }
 
 
- // prevent default img menu of options
-    document.addEventListener('contextmenu', event => {
-      event.preventDefault()
-    })
+
 
 </script>
 </body>
