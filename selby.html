@@ -180,7 +180,7 @@ font-weight: bold;
 
 <div class="container" id="container">
   <!-- row 1, col 1 -->
-  <div class="item" id="oneone" onclick="clicked(this.id)">
+  <div class="item" id="oneone" onmousedown="clicked(this.id)">
   <a>
   <span class="white">Monday</span>
   <br>Romanby<br>results, handicaps, par 3 results, prizes.
@@ -240,8 +240,7 @@ font-weight: bold;
 
 
 function clicked(id) {
-console.log("clicked")
-  
+
    // vibrate if android phone or "pop" for anything else 
    const canVibrate = window.navigator.vibrate
    if (canVibrate) {
@@ -250,27 +249,22 @@ console.log("clicked")
       var audio = new Audio('pop.wav');
       audio.play();   
    }   
-   console.log("clicked")
-   // resize
-   document.getElementById(id).classList.toggle("half")
    
-  console.log("clicked")
-  
-      //setTimeout(function() {
-      //document.getElementById(id).classList.toggle("half")
-      if (id == "oneone") {
-         window.location.assign("monday.html");   
-      }
-      if (id == "onetwo") {
-         window.location.assign("monday.html");   
-      }
-      if (id == "twoone") {
-         window.location.assign("tuesday.html");
-      }
-      if (id == "threeone") {   
-         window.location.assign("wednesday.html"); 
-      }  
-      //},100 )
+   document.getElementById(id).classList.toggle("half")
+
+   if (id == "oneone") {
+       window.location.assign("monday.html");   
+   }
+   if (id == "onetwo") {
+       window.location.assign("monday.html");   
+   }
+   if (id == "twoone") {
+       window.location.assign("tuesday.html");
+   }
+   if (id == "threeone") {   
+       window.location.assign("wednesday.html"); 
+   }  
+
   
    
    
