@@ -22,29 +22,22 @@ html {
   flex-flow: column wrap;
   align-content: space-between;
   /* The container needs a fixed height, and it 
-   * needs to be taller than your tallest column. */
+   * needs to be taller than the tallest column. */
   height: 86vh;
-
   background: black;
-
-  padding: 1vw; //20px;
- 
+  padding: 1vw;
   margin: 1vw auto; 
-  counter-reset: items;
-  
+  //counter-reset: items;
 }
 
 
 .item {
-
-font-family: Kalam;
+  font-family: Kalam;
   width: 49%;
-user-select: none;
+  user-select: none;
   position: relative;
   margin-bottom: 2%;
   border-radius: 5px;
-  //background-color: dodgerBlue;
-  //border: 1px solid blue; //#4290e2;
   box-shadow: 0 2px 2px rgba(0,90,250,0.05),
     0 4px 4px rgba(0,90,250,0.05),
     0 8px 8px rgba(0,90,250,0.05),
@@ -55,68 +48,47 @@ user-select: none;
   height: 27vh;
 }
 
-//.item::before {
-//  counter-increment: items;
-//  content: counter(items);
-//}
-
-/* Re-order items into 2 rows */
-.item:nth-child(odd) { order: 1; }
-.item:nth-child(even) { order: 2; }
-
 /* row column*/
-/* monday */
 #oneone {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-
   justify-content: center;
   align-items: center;
   background: #C24641;  
   user-select: none;
-
 }
 
 #twoone {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-
   justify-content: left;
   align-items: center;
   background: #2B547E;
-  
-  
-user-select: none;
-  
-  
+  user-select: none;  
 }
 
 #onetwo {
-   font-size: calc(1vw + 1vh + 2vmin);
+  font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-
   justify-content: left;
   align-items: center;
   background: #4863A0;
-  
-user-select: none;
-  
-  
+  user-select: none;
 }
 
 #twotwo {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-user-select: none;
+  user-select: none;
   justify-content: left;
   align-items: left;
   background: #007C80;
 }
 
 #threeone {
-   font-size: calc(1vw + 1vh + 2vmin);
+  font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-user-select: none;
+  user-select: none;
   justify-content: left;
   align-items: left;
   background: #1B8A6B;
@@ -125,22 +97,17 @@ user-select: none;
 #threetwo {
   font-size: calc(1vw + 1vh + 2vmin);
   display: flex;
-user-select: none;
+  user-select: none;
   justify-content: left;
   align-items: left;
   background: #C36241;
 }
 
-
-
-
 .white {
-font-family: sans-serif;
-font-weight: bold;
-
+  font-family: sans-serif;
+  font-weight: bold;
   justify-content: center;
   align-items: center;
-
 }
 
 #oneone.half,
@@ -150,7 +117,6 @@ font-weight: bold;
 #threeone.half,
 #threetwo.half {
    animation: scaleswitch 1s;
-   //background: blue;
 }
 
 @keyframes scaleswitch {
@@ -169,8 +135,6 @@ font-weight: bold;
 #A74AC7 purple flower
 #663399 rebeccapurple
 #2B547E blue jay
-
-
 */
 
 
@@ -227,42 +191,17 @@ font-weight: bold;
 </div>
 
 <script>
-// intro splash
-// document.getElementById("firstscreen").classList.toggle("splash")
-//leave on for 2.5 seconds
-
-// setTimeout(function() {document.getElementById("firstscreen").classList.toggle("splash")
-// document.getElementById("container").style.display = "flex"
-// document.getElementById("firstscreen").style.display = "none"
-// },2500 )
-
-
-
 
 function clicked(id) {
 
-   // vibrate if android phone or "pop" for anything else 
- /*  
-   var canVibrate = "false";
-   canVibrate = window.navigator.vibrate
-   if (canVibrate) {
-      window.navigator.vibrate(150)
-   } else {
-      var audio = new Audio('pop.wav');
-      audio.play();   
-   }   
- */
-
-let canVibrate = false;
-document.addEventListener("touchstart", (event) => {
-    if (!canVibrate) {
+   let canVibrate = false;
+   document.addEventListener("touchstart", (event) => {
+   if (!canVibrate) {
         canVibrate = true
-    }
-    navigator.vibrate(200);
-});
+   }
+   navigator.vibrate(20);
+   });
 
-
-  
    //document.getElementById(id).classList.toggle("half")
 
    if (id == "oneone") {
@@ -272,25 +211,19 @@ document.addEventListener("touchstart", (event) => {
        window.location.assign("monday.html");   
    }
    if (id == "twoone") {
-       window.location.assign("tuesday.html");
+       window.location.assign("monday.html");
+   }
+   if (id == "twotwo") {
+       window.location.assign("monday.html");
    }
    if (id == "threeone") {   
-       window.location.assign("wednesday.html"); 
+       window.location.assign("monday.html"); 
    }  
-
-  
-   
-   
-   
-      
+   if (id == "threetwo") {
+       window.location.assign("monday.html");
+   }
 }
-
-
-
 
 </script>
 </body>
-
 </html>
-
-
