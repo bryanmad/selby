@@ -337,6 +337,7 @@ document.getElementById("screenshot").innerHTML = txt;
 }
 
 function saveToLocalStorage() {
+   document.getElementById("save").style.background = "blue";
    var txt = "";   
    for (i = 1; i <= 8; i++) {
         temp = document.getElementById("pair" + i).innerText
@@ -351,6 +352,7 @@ function saveToLocalStorage() {
 }
 
 function getFromLocalStorage() {
+   document.getElementById("restore").style.background = "blue";
    txt = "";
    // only retrieve for same day
    if (dday == localStorage.blindgolferday) {
