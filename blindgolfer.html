@@ -337,6 +337,7 @@ document.getElementById("screenshot").innerHTML = txt;
 }
 
 function saveToLocalStorage() {
+   setTimeout(document.getElementById("save").style.background = "#3498DB",1000)
    document.getElementById("save").style.background = "blue";
    var txt = "";   
    for (i = 1; i <= 8; i++) {
@@ -352,6 +353,7 @@ function saveToLocalStorage() {
 }
 
 function getFromLocalStorage() {
+   setTimeout(document.getElementById("recover").style.background = "#3498DB",1000)
    document.getElementById("restore").style.background = "blue";
    txt = "";
    // only retrieve for same day
