@@ -46,7 +46,7 @@
       display: none;
     }
 
-    .xround_menu_icon {
+    .round_menu_icon {
       display: block;
       position: absolute;
       overflow: hidden;
@@ -58,7 +58,7 @@
       text-indent: -9999px;
       appearance: none;
       box-shadow: none;
-      //border-radius: none;
+      border-radius: none;
       border: none;
       cursor: pointer;
       transition: background 0.3s;
@@ -67,19 +67,14 @@
       transform: translate(-50%, -50%);
       background-color: transparent;
       z-index: 99;
-	  
-	  
-	  //border-radius: 58%;
-	  
-	  
-	  
+
     }
 
-    .xround_menu_icon:focus {
+    .round_menu_icon:focus {
       outline: none;
     }
 
-    .xround_menu_icon span {
+    .round_menu_icon span {
       display: block;
       position: absolute;
       top: 15px;
@@ -89,8 +84,8 @@
       background: #fff;
     }
 
-    .xround_menu_icon span:before,
-    .xround_menu_icon span:after {
+    .round_menu_icon span:before,
+    .round_menu_icon span:after {
       position: absolute;
       display: block;
       left: 0;
@@ -100,48 +95,48 @@
       content: "";
     }
 
-    .xround_menu_icon span:before {
+    .round_menu_icon span:before {
       top: -14px;
     }
 
-    .xround_menu_icon span:after {
+    .round_menu_icon span:after {
       bottom: -14px;
     }
 
-    .xround_menu_icon-X span {
+    .round_menu_icon-X span {
       transition: background 0s 0.3s;
     }
 
-    .xround_menu_icon-X span:before,
-    .xround_menu_icon-X span:after {
+    .round_menu_icon-X span:before,
+    .round_menu_icon-X span:after {
       transition-duration: 0.3s, 0.3s;
       transition-delay: 0.3s, 0s;
     }
 
-    .xround_menu_icon-X span:before {
+    .round_menu_icon-X span:before {
       transition-property: top, transform;
     }
 
-    .xround_menu_icon-X span:after {
+    .round_menu_icon-X span:after {
       transition-property: bottom, transform;
     }
 
-    .xround_menu_icon-X.is-active span {
+    .round_menu_icon-X.is-active span {
       background: none;
     }
 
-    .xround_menu_icon-X.is-active span:before {
+    .round_menu_icon-X.is-active span:before {
       top: 0;
       transform: rotate(45deg);
     }
 
-    .xround_menu_icon-X.is-active span:after {
+    .round_menu_icon-X.is-active span:after {
       bottom: 0;
       transform: rotate(-45deg);
     }
 
-    .xround_menu_icon-X.is-active span:before,
-    .xround_menu_icon-X.is-active span:after {
+    .round_menu_icon-X.is-active span:before,
+    .round_menu_icon-X.is-active span:after {
       transition-delay: 0s, 0.3s;
     }
 
@@ -150,19 +145,13 @@
       top: 9vh;
       left: 9vh;
       transform: translate(-50%, -50%);
-      //border-radius: 5px;
+      border-radius: 5px;
       width: 75px;
       height: 75px;
       z-index: 4;
       border: 5px solid white;
       box-shadow: 10px 10px 25px black;
-	  
-	  //box-shadow: 30px 30px 25px black;
-	  
-	  border-radius: 50%;
-	  
-	  
-	  
+ 
     }
 
     .bubble_menu {
@@ -175,24 +164,9 @@
       height: 75px;
       z-index: 4;
       cursor: pointer;
-   //   border-radius: 5px;
+   border-radius: 5px;
       border: 5px solid white;
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	   border-radius: 50%;
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+
     }
 
     #one,
@@ -207,7 +181,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
- //     border-radius: 5px;
+     border-radius: 5px;
       width: 75px;
       height: 75px;
       z-index: 3;
@@ -215,11 +189,7 @@
       border: 5px solid white;
       cursor: pointer;
       opacity: 0.0;
-	  
-	  
-	   border-radius: 58%;
-	  
-	  
+
     }
 
     #one {
@@ -641,33 +611,7 @@
       color:  white;
     }
  
-    button, nav, div {
-                     outline-style: none;
-					 border: none;
-    }
-	
-	
-	::selection {
-  background: none;
-  outline-style: none;
-}
-::-moz-selection {
-  background: none;
-  outline-style: none;
-}
-::-webkit-selection {
-  background: none;
-  outline-style: none;
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
     </style>
 
   <body oncontextmenu="return false;">
@@ -753,7 +697,7 @@
     //var seven = $('#seven');
     //var eight = $('#eight');
     // menuIcon.click(function() {
- /*    bubblemenu.click(function() {
+     bubblemenu.click(function() {
      if (isTop === true) {
         $('#nav').animate({
           top: '50%',
@@ -772,7 +716,7 @@
         }
       }
     });
-*/
+
 
     function showBubbles() {
       //
