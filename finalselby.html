@@ -73,8 +73,23 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vRV4u_1Z4aqpCT4VtZxB2dLe04c0q5_g
 </body>
 <script>
 
+document.onreadystatechange = function () {
+   if (document.readyState !== "complete") {
+       document.querySelector("body").style.visibility = "hidden";
+       document.getElementById("loading").style.visibility = "visible";
+   } else {
+       //setTimeout(() => {
+       document.getElementById("loading").style.visibility ="none";
+       document.querySelector("body").style.visibility = "visible";
+       //}, 1000)
+   }
+};
 
+function start() {
+window.location.assign("https://docs.google.com/spreadsheets/d/e/2PACX-1vRV4u_1Z4aqpCT4VtZxB2dLe04c0q5_gr_13dljt6dc5o30k5xbi1P9v236o_UODCcW-nohiBOP1Nyc/pubhtml?gid=3186866&single=true&chrome=false")
+}
 
+start();
 
 </script>
 </body>
