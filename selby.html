@@ -1001,7 +1001,6 @@
 
 
     function doOne() {
-      // put menu back then move to hcp page
       setTimeout(function() {
         window.location.assign("monday.html");
       }, 800);
@@ -1009,20 +1008,15 @@
 
 
     function doTwo() {
-      // if compday then allow input, else disable
-      if (grayedout == "no") {
         setTimeout(function() {
           // put menu back then move to score entry page
           window.location.assign("tuesday.html");
         }, 800);
-      } else {
-        noCompMsg();
       }
     }
 
 
     function doThree() {
-      // put menu back then move to twos page
       setTimeout(function() {
         window.location.assign("wednesday.html");
       }, 800);
@@ -1030,7 +1024,6 @@
 
 
     function doFour() {
-      // put menu back then move to results page
       setTimeout(function() {
         window.location.assign("thursday.html");
       }, 800);
@@ -1038,14 +1031,9 @@
 
 
     function doFive() {
-      // if compday then allow display, else disable
-      if (grayedout == "no") {
-        // put menu back then move to results page
         setTimeout(function() {
-          window.location.assign("final.html");
+          window.location.assign("finalselby.html");
         }, 800);
-      } else {
-        noCompMsg();
       }
     }
 

@@ -8,94 +8,44 @@
 	<meta content="Bryan M" name="author" />
 	<link href="favicon.ico" rel="icon" type="image/x-icon" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
 	<style>
 
 * {
     margin: 0;
     padding: 0;
 }
-        
 body {
     overflow: hidden;
     background-color: white;
 }
 
-.pl {
-  --hue: 223;
-  --bg: hsl(var(--hue),10%,5%);
-  --fg: hsl(var(--hue),10%,95%);
-  --dot-a: 313;
-  --dot-b: 253;
-  --dot-c: 223;
-  --dot-d: 283;
-  --trans-dur: 0.3s;
-  font-size: calc(14px + (30 - 14) * (100vw - 280px) / (3840 - 280));    
-  margin: auto;
-  margin-top: 20vh;
-  perspective: 18em;
-  position: relative;
-  width: 9em;
-  height: 9em;
-  transform-style: preserve-3d;
-}
-        
-.pldot {
-  animation-duration: 2s;
-  animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
-  animation-iteration-count: infinite;
-  border-radius: 50%;
-  position: absolute;
-  top: calc(50% - 1.5em);
-  left: calc(50% - 1.5em);
-  width: 3em;
-  height: 3em;
-}
-        
-.pldot--a {
-  animation-name: dot-a;
-  background-color: hsl(var(--dot-a), 90%, 60%);
-  box-shadow: -0.5em -0.5em 1em hsl(var(--dot-a), 90%, 30%) inset, 0.125em 0.125em 0.25em hsl(var(--dot-a), 90%, 60%) inset, -0.25em -0.25em 0.75em 0.75em hsl(var(--dot-a), 90%, 50%) inset, 0.75em 0.75em 0.75em hsla(var(--hue), 10%, 5%, 0.7);
-}
-        
-.pldot--b {
-  animation-name: dot-b;
-  background-color: hsl(var(--dot-b), 90%, 60%);
-  box-shadow: -0.5em -0.5em 1em hsl(var(--dot-b), 90%, 30%) inset, 0.125em 0.125em 0.25em hsl(var(--dot-b), 90%, 60%) inset, -0.25em -0.25em 0.75em 0.75em hsl(var(--dot-b), 90%, 50%) inset, 0.75em 0.75em 0.75em hsla(var(--hue), 10%, 5%, 0.7);
-}
-        
-.pldot--c {
-  animation-name: dot-c;
-  background-color: hsl(var(--dot-c), 90%, 60%);
-  box-shadow: -0.5em -0.5em 1em hsl(var(--dot-c), 90%, 30%) inset, 0.125em 0.125em 0.25em hsl(var(--dot-c), 90%, 60%) inset, -0.25em -0.25em 0.75em 0.75em hsl(var(--dot-c), 90%, 50%) inset, 0.75em 0.75em 0.75em hsla(var(--hue), 10%, 5%, 0.7);
-}
-        
-.pldot--d {
-  animation-name: dot-d;
-  background-color: hsl(var(--dot-d), 90%, 60%);
-  box-shadow: -0.5em -0.5em 1em hsl(var(--dot-d), 90%, 30%) inset, 0.125em 0.125em 0.25em hsl(var(--dot-d), 90%, 60%) inset, -0.25em -0.25em 0.75em 0.75em hsl(var(--dot-d), 90%, 50%) inset, 0.75em 0.75em 0.75em hsla(var(--hue), 10%, 5%, 0.7);
+.holder {
+    overflow: hidden;  
+    top: 30%;
+    left: calc(50% - 25px);
+    position: absolute !important;
 }
 
-/* Animations */
-@keyframes dot-a {
-  from {transform: rotateY(0) rotateZ(0) translateX(-100%) rotateY(0) rotateZ(0);}
-  50% {transform: rotateY(1turn) rotateZ(0) translateX(-100%) rotateY(-1turn) rotateZ(0);}
-  to {transform: rotateY(1turn) rotateZ(-1turn) translateX(-100%) rotateY(-1turn) rotateZ(1turn);}
+
+#loading {
+
+  width: 50px;
+  aspect-ratio: 1;
+  --_c: radial-gradient(farthest-side,#1e90ff 92%,#0000);
+  background: 
+    var(--_c) top,
+    var(--_c) left,
+    var(--_c) right,
+    var(--_c) bottom;
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  animation: s7 1s infinite;
 }
-@keyframes dot-b {
-  from {transform: rotateY(0) rotateZ(0) translateX(100%) rotateY(0) rotateZ(0);}
-  50% {transform: rotateY(1turn) rotateZ(0) translateX(100%) rotateY(-1turn) rotateZ(0);}
-  to {transform: rotateY(1turn) rotateZ(-1turn) translateX(100%) rotateY(-1turn) rotateZ(1turn);}
-}
-@keyframes dot-c {
-  from {transform: rotateZ(0) rotateX(0) translateY(-100%) rotateZ(0) rotateX(0);}
-  50% {transform: rotateZ(-1turn) rotateX(0) translateY(-100%) rotateZ(1turn) rotateX(0);}
-  to {transform: rotateZ(-1turn) rotateX(1turn) translateY(-100%) rotateZ(1turn) rotateX(-1turn);}
-}
-@keyframes dot-d {
-  from {transform: rotateZ(0) rotateX(0) translateY(100%) rotateZ(0) rotateX(0);}
-  50% {transform: rotateZ(-1turn) rotateX(0) translateY(100%) rotateZ(1turn) rotateX(0);}
-  to {transform: rotateZ(-1turn) rotateX(1turn) translateY(100%) rotateZ(1turn) rotateX(-1turn);}
-}        
+@keyframes s7 {to{transform: rotate(.5turn);}}
+
+@-webkit-keyframes s7 {to{-webkit-transform: rotate(.5turn);}}
+       
         
 </style>
 </head>

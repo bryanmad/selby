@@ -46,36 +46,41 @@ body {
 
 @-webkit-keyframes s7 {to{-webkit-transform: rotate(.5turn);}}
 
-
 </style>
-</head>
 <body>
 <div class="holder">
-<div class="loading" id="loading"></div>
-</div>
+<!-- selby stuff
 
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRV4u_1Z4aqpCT4VtZxB2dLe04c0q5_gr_13dljt6dc5o30k5xbi1P9v236o_UODCcW-nohiBOP1Nyc/pubhtml?gid=1676361864&single=true
+-->
+<iframe
+  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT2Z_jWLLmXIRQHhx9cPBRq4Z-fH_Kv8afs1eK767DuMsg9xzwV2Gf9j9rhteUUcO5pgCtQASi9URnU/pubhtml?gid=1676361864&single=true&chrome=false";
+  style="
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 999999;
+    height: 100%;
+  ">
+</iframe>
+</div>
+</body>
 <script>
 
-document.onreadystatechange = function () {
-   if (document.readyState !== "complete") {
-       document.querySelector("body").style.visibility = "hidden";
-       document.getElementById("loading").style.visibility = "visible";
-   } else {
-       //setTimeout(() => {
-       document.getElementById("loading").style.visibility ="none";
-       document.querySelector("body").style.visibility = "visible";
-       //}, 1000)
-   }
-};
 
-// https://docs.google.com/spreadsheets/d/e/2PACX-1vRV4u_1Z4aqpCT4VtZxB2dLe04c0q5_gr_13dljt6dc5o30k5xbi1P9v236o_UODCcW-nohiBOP1Nyc/pubhtml?gid=3186866&single=true
-function start() {
-window.location.assign("https://docs.google.com/spreadsheets/d/e/2PACX-1vRV4u_1Z4aqpCT4VtZxB2dLe04c0q5_gr_13dljt6dc5o30k5xbi1P9v236o_UODCcW-nohiBOP1Nyc/pubhtml?gid=3186866&single=true&chrome=false")
-}
 
-start();
 
 </script>
 </body>
-
 </html>
+
+
+
+
+
