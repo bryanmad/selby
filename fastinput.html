@@ -653,13 +653,13 @@ https://docs.google.com/forms/d/1g7SBX8Kz1oLoKs5Y_WjwGd6CoITDQeUzkXGLvPGdE1s/pre
 			}
 			if(day == 2) {
 			        console.log(day + " Tuesday")
-			        course = "Selby"
+			        course = "Oaks"
 			        fullday = "Tuesday";
 				setupTuesdayCourse()
 			}
 			if(day == 3) {
 			        console.log(day + " Wednesday")
-			        course = "Oaks"
+			        course = "Selby"
 			        fullday = "Wednesday";
 				setupWednesdayCourse()
 			}
@@ -702,37 +702,7 @@ arrCourse = [
 
 }
 
-
 function setupTuesdayCourse() {
-// set up courses with details for calculations etc.
-// array ["hole num",par,si]
-// Selby yellow tees
-// Selby hole, par, si
-arrCourse = [
-[0,0,0],
-[1,4,10],
-[2,5,4],
-[3,4,16],
-[4,5,14],
-[5,3,2],
-[6,4,18],
-[7,4,8],
-[8,3,6],
-[9,4,12],
-[10,3,11],
-[11,4,17],
-[12,4,3],
-[13,4,13],
-[14,5,7],
-[15,3,1],
-[16,4,15],
-[17,3,5],
-[18,5,9]
-]
-}
-
-
-function setupWednesdayCourse() {
 // set up courses with details for calculations etc.
 // array ["hole num",par,si]
 // Oaks yellow tees
@@ -761,6 +731,33 @@ arrCourse = [
 
 }
 
+function setupWednesdayCourse() {
+// set up courses with details for calculations etc.
+// array ["hole num",par,si]
+// Selby yellow tees
+// Selby hole, par, si
+arrCourse = [
+[0,0,0],
+[1,4,10],
+[2,5,4],
+[3,4,16],
+[4,5,14],
+[5,3,2],
+[6,4,18],
+[7,4,8],
+[8,3,6],
+[9,4,12],
+[10,3,11],
+[11,4,17],
+[12,4,3],
+[13,4,13],
+[14,5,7],
+[15,3,1],
+[16,4,15],
+[17,3,5],
+[18,5,9]
+]
+}
 
 function setupThursdayCourse() {
 // set up courses with details for calculations etc.
