@@ -875,50 +875,11 @@
         //six.removeClass('blob');
         //seven.removeClass('blob');
         //eight.removeClass('blob');
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
       }, 2000, function() {
         // Animation complete.
       })
       
-	  
-	  
-	  
-	  
-	  
-	  
-	
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+// move menu items	  
      one.animate({
         top: '-5px',
         left: '-95px',
@@ -967,7 +928,7 @@
         opacity: '1'
       }, Math.floor(Math.random() * 500) + 400);
       */
-      // grayout
+// grayout uinused items
       grayedout = "no"
       if (grayedout == "yes") {
         // disable buttons
@@ -999,7 +960,7 @@
 		*/
 	  }
 
-      // set enlarged day button
+// enlarge todays button
       dd = new Date(); /* today */
 	  //dd.setDate(dd.getDate() + 5)
 	  
@@ -1085,30 +1046,40 @@
       }, 400);
       // move menu items
       one.animate({
+		width: '75px',
+		height: '75px',  
         top: '50%'
       }, 200);
       one.animate({
         left: '50%'
       }, 200);
       two.animate({
+		width: '75px',
+		height: '75px',  
         top: '50%'
       }, 200);
       two.animate({
         left: '50%'
       }, 200);
       three.animate({
+	    width: '75px',
+		height: '75px',
         top: '50%'
       }, 200);
       three.animate({
         left: '50%'
       }, 200);
       four.animate({
+		width: '75px',
+		height: '75px',  
         top: '50%'
       }, 200);
       four.animate({
         left: '50%'
       }, 200);
       five.animate({
+		width: '75px',
+		height: '75px',
         top: '50%'
       }, 200);
       five.animate({
@@ -1138,9 +1109,47 @@
       }, 200);
       */
 	  
+
 	  
 	  
-	   // unset enlarged day button
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+      menuIsOpen = false;
+      isTop = true;
+      //one.addClass('blob');
+    }
+	
+	
+	
+	
+	
+	// control close menu click
+    $('.bubble').click(function() {
+		
+		
+		
+		
+	  
+	  
+// unset enlarged day button
       dd = new Date(); /* today */
 	  //dd.setDate(dd.getDate() + 5)
 	  
@@ -1148,7 +1157,7 @@
         one.animate({
         width: '75px',
 		height: '75px'
-        }, 200);	
+        }, 300);	
       }
      if (dd.getDay() == 2) {		  
 		two.animate({
@@ -1187,34 +1196,18 @@
         }, 300);	
       }
 
-  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-      menuIsOpen = false;
-      isTop = true;
-      //one.addClass('blob');
-    }
-    $('.bubble').click(function() {
+  		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
       menuIcon.removeClass('is-active');
       hideBubbles();
       // change 400, 500 to 900, 500
