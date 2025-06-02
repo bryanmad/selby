@@ -1461,14 +1461,14 @@ function rejectButton() {
 function clearForm() {
     // reset each hole
     for(var i = 1; i <= 18; i++) {
-        document.getElementById("strokes" + i).innerText = ""; 
-        document.getElementById("points" + i).innerText  = "";  
+        document.getElementById("strokes" + i).innerText = "0"; 
+        document.getElementById("points" + i).innerText  = "0";  
     } 
     
-    document.getElementById("front9strokes").innerText = "";
-    document.getElementById("back9strokes").innerText  = "";
-    document.getElementById("front9points").innerText  = "";
-    document.getElementById("back9points").innerText   = "";
+    document.getElementById("front9strokes").innerText = "0";
+    document.getElementById("back9strokes").innerText  = "0";
+    document.getElementById("front9points").innerText  = "0";
+    document.getElementById("back9points").innerText   = "0";
 
     currenthole = 1;
     document.getElementById("hole18").style.background = "black";
